@@ -1,8 +1,8 @@
 %define name	enet
-%define version	1.3.3
+%define version	1.3.4
 %define rel	1
 
-%define major		1
+%define major		2
 %define libname		%mklibname %{name} %{major}
 %define develname	%mklibname %{name} -d
 
@@ -61,22 +61,16 @@ Development files and headers for %{name}.
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
 # we don't want	these
 rm -rf %{buildroot}%{_libdir}/*.la
 
-%clean
-rm -rf %{buildroot}
-
 %files -n %{libname}
-%defattr(-,root,root)
 %doc LICENSE README ChangeLog
 %{_libdir}/libenet.so.%{major}*
 
 %files -n %{develname}
-%defattr(-,root,root)
 %{_includedir}/%{name}
 %{_libdir}/libenet.so
 %{_libdir}/pkgconfig/libenet.pc
