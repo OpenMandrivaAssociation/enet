@@ -1,5 +1,5 @@
 %define name	enet
-%define version	1.3.4
+%define version	1.3.5
 %define rel	1
 
 %define major		2
