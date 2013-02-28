@@ -1,15 +1,11 @@
-%define name	enet
-%define version	1.3.5
-%define rel	1
-
-%define major		2
-%define libname		%mklibname %{name} %{major}
-%define develname	%mklibname %{name} -d
+%define major 2
+%define libname %mklibname %{name} %{major}
+%define develname %mklibname %{name} -d
 
 Summary:	Simple and robust network communication layer on top of UDP
-Name:		%{name}
-Version:	%{version}
-Release:	%mkrel %{rel}
+Name:		enet
+Version:	1.3.5
+Release:	2
 Source0:	http://enet.bespin.org/download/%name-%version.tar.gz
 License:	BSD
 Group:		System/Libraries
@@ -67,10 +63,10 @@ Development files and headers for %{name}.
 rm -rf %{buildroot}%{_libdir}/*.la
 
 %files -n %{libname}
-%doc LICENSE README ChangeLog
 %{_libdir}/libenet.so.%{major}*
 
 %files -n %{develname}
+%doc LICENSE README ChangeLog
 %{_includedir}/%{name}
 %{_libdir}/libenet.so
 %{_libdir}/pkgconfig/libenet.pc
