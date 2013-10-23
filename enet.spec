@@ -4,9 +4,9 @@
 
 Summary:	Simple and robust network communication layer on top of UDP
 Name:		enet
-Version:	1.3.5
-Release:	2
-Source0:	http://enet.bespin.org/download/%name-%version.tar.gz
+Version:	1.3.9
+Release:	1
+Source0:	http://enet.bespin.org/download/%{name}-%{version}.tar.gz
 License:	BSD
 Group:		System/Libraries
 URL:		http://enet.bespin.org
@@ -70,3 +70,4 @@ rm -rf %{buildroot}%{_libdir}/*.la
 %{_includedir}/%{name}
 %{_libdir}/libenet.so
 %{_libdir}/pkgconfig/libenet.pc
+
