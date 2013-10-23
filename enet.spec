@@ -5,7 +5,7 @@
 Summary:	Simple and robust network communication layer on top of UDP
 Name:		enet
 Version:	1.3.5
-Release:	4
+Release:	5
 Source0:	http://enet.bespin.org/download/%name-%version.tar.gz
 License:	BSD
 Group:		System/Libraries
