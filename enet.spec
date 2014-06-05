@@ -67,6 +67,8 @@ rm -rf %{buildroot}%{_libdir}/*.la
 
 %files -n %{libname}
 %{_libdir}/libenet.so.%{major}*
+%{_libdir}/libenet.so.7
+%{_libdir}/libenet.so.7.0.0
 
 %files -n %{develname}
 %doc LICENSE README ChangeLog
