@@ -1,10 +1,11 @@
-%define major 2
-%define libname %mklibname %{name} %{major}
-%define develname %mklibname %{name} -d
+%define major		7
+%define libname		%mklibname %{name} %{major}
+%define develname	%mklibname %{name} -d
 
 Summary:	Simple and robust network communication layer on top of UDP
+
 Name:		enet
-Version:	1.3.11
+Version:	1.3.12
 Release:	1
 Source0:	http://enet.bespin.org/download/%{name}-%{version}.tar.gz
 License:	BSD
@@ -24,6 +25,7 @@ remains flexible, portable, and easily embeddable.
 
 %package -n	%{libname}
 Summary:	Libraries for %{name}
+
 Group:		System/Libraries
 
 %description -n	%{libname}
@@ -41,6 +43,7 @@ This package provides the libraries for %{name}.
 
 %package -n %{develname}
 Summary:	Development files for for %{name}
+
 Group:		Development/C
 Requires:	%{libname} = %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
@@ -59,17 +62,11 @@ Development files and headers for %{name}.
 %install
 %makeinstall_std
 
-# we don't want	these
-rm -rf %{buildroot}%{_libdir}/*.la
-
 %files -n %{libname}
+%doc LICENSE README ChangeLog
 %{_libdir}/libenet.so.%{major}*
 
 %files -n %{develname}
-%doc LICENSE README ChangeLog
 %{_includedir}/%{name}
 %{_libdir}/libenet.so
 %{_libdir}/pkgconfig/libenet.pc
-
-
-
