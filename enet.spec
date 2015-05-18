@@ -1,4 +1,4 @@
-%define major 2
+%define major 7
 %define libname %mklibname %{name} %{major}
 %define develname %mklibname %{name} -d
 
@@ -7,6 +7,7 @@ Name:		enet
 Version:	1.3.13
 Release:	0.1
 Source0:	http://enet.bespin.org/download/%name-%version.tar.gz
+Source100:	enet.rpmlintrc
 License:	BSD
 Group:		System/Libraries
 URL:		http://enet.bespin.org
