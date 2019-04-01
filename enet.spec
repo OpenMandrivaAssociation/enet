@@ -5,8 +5,8 @@
 Summary:	Simple and robust network communication layer on top of UDP
 
 Name:		enet
-Version:	1.3.13
-Release:	2
+Version:	1.3.14
+Release:	1
 Source0:	http://enet.bespin.org/download/%{name}-%{version}.tar.gz
 Source100:	enet.rpmlintrc
 License:	BSD
@@ -58,10 +58,10 @@ Development files and headers for %{name}.
 
 %build
 %configure2_5x --disable-static
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files -n %{libname}
 %doc LICENSE README ChangeLog
