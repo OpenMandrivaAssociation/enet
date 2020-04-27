@@ -5,7 +5,7 @@
 Summary:	Simple and robust network communication layer on top of UDP
 
 Name:		enet
-Version:	1.3.14
+Version:	1.3.15
 Release:	1
 Source0:	http://enet.bespin.org/download/%{name}-%{version}.tar.gz
 Source100:	enet.rpmlintrc
