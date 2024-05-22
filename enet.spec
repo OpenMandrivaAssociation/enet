@@ -5,13 +5,13 @@
 Summary:	Simple and robust network communication layer on top of UDP
 
 Name:		enet
-Version:	1.3.17
-Release:	2
-Source0:	http://enet.bespin.org/download/%{name}-%{version}.tar.gz
+Version:	1.3.18
+Release:	1
+Source0:	https://enet.bespin.org/download/%{name}-%{version}.tar.gz
 Source100:	enet.rpmlintrc
 License:	BSD
 Group:		System/Libraries
-URL:		http://enet.bespin.org
+URL:		https://enet.bespin.org
 
 %description
 ENet's purpose is to provide a relatively thin, simple and robust
@@ -57,7 +57,7 @@ Development files and headers for %{name}.
 %setup -q 
 
 %build
-%configure2_5x --disable-static
+%configure --disable-static
 %make_build
 
 %install
