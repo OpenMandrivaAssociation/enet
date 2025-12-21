@@ -13,6 +13,11 @@ License:	BSD
 Group:		System/Libraries
 URL:		https://enet.bespin.org
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 ENet's purpose is to provide a relatively thin, simple and robust
 network communication layer on top of UDP (User Datagram Protocol). The
